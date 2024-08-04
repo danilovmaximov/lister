@@ -1,3 +1,5 @@
+name: lister
+
 services:
   db:
     container_name: postgres-db
@@ -9,26 +11,39 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data 
- 
-  pgadmin:
-      container_name: pgadmin
-      image: dpage/pgadmin4
-      restart: always
-      environment:
-        PGADMIN_DEFAULT_EMAIL: danilovmaximov@gmail.com
-        PGADMIN_DEFAULT_PASSWORD: HuPToNTK3
-      ports:
-        - "5050:80"
+      - pgdata:/var/lib/postgresql/data
+
+  # pgadmin:
+  #   container_name: pgadmin
+  #   image: dpage/pgadmin4
+  #   restart: always
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: danilovmaximov@gmail.com
+  #     PGADMIN_DEFAULT_PASSWORD: HuPToNTK3
+  #   ports:
+  #     - "5050:80"
 
   realtime-service:
     container_name: realtime-service
-    build:
-      context: realtime-service
-      dockerfile: Dockerfile
-    image: lister-realtime-service:latest
+    build: ./realtime-service
     ports:
       - "9000:9000"
-    
+
+  nginx:
+    container_name: web-server
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - frontend-builded-files:/usr/share/nginx/html/lister
+      - ./nginx:/etc/nginx/conf.d:ro
+
+  build-frontend:
+    container_name: build-frontend
+    build: ./frontend
+    volumes:
+      - frontend-builded-files:/app/dist
+
 volumes:
+  frontend-builded-files:
   pgdata:

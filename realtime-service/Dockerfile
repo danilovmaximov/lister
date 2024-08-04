@@ -1,5 +1,5 @@
 # Use the Maven image to build the project
-FROM maven:3.8.7-openjdk-18 AS build
+FROM maven:3.9.8-amazoncorretto-17-al2023 AS build
 LABEL authors="danilmaksimov"
 
 # Set the working directory in the container
@@ -13,7 +13,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Use the OpenJDK image to run the application
-FROM openjdk:17-jdk-alpine
+FROM amazoncorretto:17.0.12-al2023
 LABEL authors="danilmaksimov"
 
 # Copy the packaged jar file from the build stage

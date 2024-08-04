@@ -1,12 +1,45 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+# === Global ignore ===
+.DS_Store
+# === Frontend ignore ===
 
-.idea
+# Logs
+frontend/**/logs
+frontend/**/*.log
+frontend/**/npm-debug.log*
+frontend/**/yarn-debug.log*
+frontend/**/yarn-error.log*
+frontend/**/pnpm-debug.log*
+frontend/**/lerna-debug.log*
+
+# Build & Deps
+frontend/**/node_modules
+frontend/**/dist
+frontend/**/dist-ssr
+frontend/**/dev-dist
+frontend/**/*.local
+
+# Editor directories and files
+frontend/**/.vscode/*
+frontend/**/!.vscode/extensions.json
+frontend/**/.idea
+frontend/**/*.suo
+frontend/**/*.ntvs*
+frontend/**/*.njsproj
+frontend/**/*.sln
+frontend/**/*.sw?
+
+
+# === Backend ignore ===
+
+# Default ignored files
+realtime-service/**/shelf/
+realtime-service/**/workspace.xml
+# Editor-based HTTP Client requests
+realtime-service/**/httpRequests/
+# Datasource local storage ignored files
+realtime-service/**/dataSources/
+realtime-service/**/dataSources.local.xml
+
+realtime-service/**/.idea
 realtime-service/.idea
 realtime-service/.mvn
