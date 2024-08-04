@@ -24,7 +24,7 @@ services:
   realtime-service:
     container_name: realtime-service
     build:
-      context: lister-realtime-service
+      context: realtime-service
       dockerfile: Dockerfile
     image: lister-realtime-service:latest
     ports:
