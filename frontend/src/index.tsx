@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom/client'
 // Default styles
 import './index.css'
 // Components
-import Routing from '@pages/index'
+import { RoutingProvider } from 'providers/RoutingProvider'
+import { AuthProvider } from 'providers/AuthProvider'
+import { CustomRoutes } from '@pages/Routes'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Routing />
+    <RoutingProvider>
+      <AuthProvider>
+        <CustomRoutes />
+      </AuthProvider>
+    </RoutingProvider>
   </React.StrictMode>
 )
