@@ -40,6 +40,15 @@ realtime-service/**/httpRequests/
 realtime-service/**/dataSources/
 realtime-service/**/dataSources.local.xml
 
-realtime-service/**/.idea
+.idea
 realtime-service/.idea
 realtime-service/.mvn
+realtime-service/target
+
+lister-eureka/.idea
+lister-eureka/.mvn
+lister-eureka/target
+
+lister-api-gateway/.idea
+lister-api-gateway/.mvn
+lister-api-gateway/target

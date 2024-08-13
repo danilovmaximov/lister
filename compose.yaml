@@ -27,7 +27,19 @@ services:
     container_name: realtime-service
     build: ./realtime-service
     ports:
-      - "9000:9000"
+      - "9051:9051"
+
+  api-gateway:
+    container_name: api-gateway
+    build: ./lister-api-gateway
+    ports:
+      - "9050:9050"
+
+  eureka-server:
+    container_name: eureka-server
+    build: ./lister-eureka
+    ports:
+      - "9001:9001"
 
   nginx:
     container_name: web-server

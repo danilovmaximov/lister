@@ -1,5 +1,6 @@
-package com.lister.realtime.service;
+package com.lister.realtime.service.service;
 
+import com.lister.realtime.service.model.TestTable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,6 @@
-package com.lister.realtime.service;
+package com.lister.realtime.service.service;
 
+import com.lister.realtime.service.model.TestTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;

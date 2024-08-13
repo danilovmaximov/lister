@@ -1,4 +1,4 @@
-package com.lister.realtime.service;
+package com.lister.realtime.service.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
