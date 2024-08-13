@@ -1,5 +1,10 @@
 # === Global ignore ===
 .DS_Store
+
+# === Postgres DB ===
+
+pgdata/**/*
+
 # === Frontend ignore ===
 
 # Logs
