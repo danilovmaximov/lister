@@ -3,8 +3,8 @@ import { api } from './api'
 export async function testRequest(accessToken: string) {
   try {
     const { data } = await api.get<string>('/test', {
-      params: {
-        access_token: accessToken,
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
       },
     })
     return data
