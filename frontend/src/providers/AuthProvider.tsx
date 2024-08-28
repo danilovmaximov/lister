@@ -12,7 +12,7 @@ interface Props {
 export const AuthProvider = ({ children }: Props) => {
   const navigate = useNavigate()
   const onRedirectCallback: Auth0ProviderOptions['onRedirectCallback'] = () => {
-    navigate('/main')
+    navigate('/')
   }
 
   return (

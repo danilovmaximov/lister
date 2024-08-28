@@ -5,7 +5,7 @@ import './index.css'
 // Components
 import { RoutingProvider } from 'providers/RoutingProvider'
 import { AuthProvider } from 'providers/AuthProvider'
-import { CustomRoutes } from '@pages/Routes.tsx'
+import { CustomRoutes } from 'pages/Routes'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

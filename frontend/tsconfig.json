@@ -21,11 +21,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Alias */
-    "baseUrl": "src",
-    "paths": {
-      "@pages/*": ["./pages/*"],
-      "@utils/*": ["./utils/*"]
-    }
+    "baseUrl": "src"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

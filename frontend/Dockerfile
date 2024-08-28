@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm i
 COPY . ./
-CMD ["npm", "run", "build"]
+RUN npm run build
 
 FROM nginx:1.27.1-alpine
 WORKDIR /usr/share/nginx/html
