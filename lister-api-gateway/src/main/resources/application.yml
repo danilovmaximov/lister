@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: lister-api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: tasks-service
+          uri: lb://tasks-service
+          predicates:
+            - Path=/tasks/**
+
+server:
+  port: 9050
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+
+okta:
+  oauth2:
+    audience: http://localhost:9050
+    issuer: https://dev-dtfxradw0lo62fwv.us.auth0.com/

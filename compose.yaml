@@ -24,10 +24,10 @@ services:
   #     - "5050:80"
 
   realtime-service:
-    container_name: realtime-service
-    build: ./realtime-service
+    container_name: tasks-service
+    build: ./tasks-service
     ports:
-      - "9051:9051"
+      - "9052:9052"
 
   api-gateway:
     container_name: api-gateway
