@@ -1,0 +1,26 @@
+{
+  "actionBar.logout": [
+    {
+      "type": 0,
+      "value": "Выйти"
+    }
+  ],
+  "navbar.important": [
+    {
+      "type": 0,
+      "value": "Важно"
+    }
+  ],
+  "navbar.inbox": [
+    {
+      "type": 0,
+      "value": "Входящие"
+    }
+  ],
+  "navbar.today": [
+    {
+      "type": 0,
+      "value": "Сегодня"
+    }
+  ]
+}

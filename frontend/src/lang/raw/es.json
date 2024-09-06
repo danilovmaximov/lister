@@ -1,0 +1,14 @@
+{
+  "actionBar.logout": {
+    "defaultMessage": "Cerrar sesión"
+  },
+  "navbar.important": {
+    "defaultMessage": "Importante"
+  },
+  "navbar.inbox": {
+    "defaultMessage": "Bandeja de entrada"
+  },
+  "navbar.today": {
+    "defaultMessage": "Hoy"
+  }
+}

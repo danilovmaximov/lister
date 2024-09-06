@@ -1,17 +1,17 @@
 name: lister
 
 services:
-  db:
-    container_name: postgres-db
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_USER: lister
-      POSTGRES_PASSWORD: HuPToNTK3
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./pgdata:/var/lib/postgresql/data
+  # db:
+  #   container_name: postgres-db
+  #   image: postgres
+  #   restart: always
+  #   environment:
+  #     POSTGRES_USER: lister
+  #     POSTGRES_PASSWORD: HuPToNTK3
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ./pgdata:/var/lib/postgresql/data
 
   # pgadmin:
   #   container_name: pgadmin
@@ -23,23 +23,23 @@ services:
   #   ports:
   #     - "5050:80"
 
-  realtime-service:
-    container_name: tasks-service
-    build: ./tasks-service
-    ports:
-      - "9052:9052"
+  # realtime-service:
+  #   container_name: tasks-service
+  #   build: ./tasks-service
+  #   ports:
+  #     - "9052:9052"
 
-  api-gateway:
-    container_name: api-gateway
-    build: ./lister-api-gateway
-    ports:
-      - "9050:9050"
+  # api-gateway:
+  #   container_name: api-gateway
+  #   build: ./lister-api-gateway
+  #   ports:
+  #     - "9050:9050"
 
-  eureka-server:
-    container_name: eureka-server
-    build: ./lister-eureka
-    ports:
-      - "9001:9001"
+  # eureka-server:
+  #   container_name: eureka-server
+  #   build: ./lister-eureka
+  #   ports:
+  #     - "9001:9001"
 
   web-server:
     container_name: web-server
@@ -48,6 +48,3 @@ services:
       - "8080:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d:ro
-
-volumes:
-  frontend-builded-files:

@@ -1,5 +1,4 @@
-import ActionBar from 'components/ActionBar'
-import NavBar from 'components/NavBar'
+import { ActionBar, NavBar } from 'components'
 import CardField from './components/CardField'
 
 export function MainPage() {

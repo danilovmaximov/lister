@@ -18,7 +18,6 @@ export async function getTasks(accessToken: string) {
         Authorization: `Bearer ${accessToken}`,
       },
     })
-    console.log(data)
     return data
   } catch (error) {
     console.error(error)

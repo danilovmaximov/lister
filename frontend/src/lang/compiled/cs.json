@@ -1,0 +1,26 @@
+{
+  "actionBar.logout": [
+    {
+      "type": 0,
+      "value": "Odhlásit se"
+    }
+  ],
+  "navbar.important": [
+    {
+      "type": 0,
+      "value": "Důležité"
+    }
+  ],
+  "navbar.inbox": [
+    {
+      "type": 0,
+      "value": "Doručená pošta"
+    }
+  ],
+  "navbar.today": [
+    {
+      "type": 0,
+      "value": "Dnes"
+    }
+  ]
+}

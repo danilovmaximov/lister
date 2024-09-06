@@ -1,0 +1,14 @@
+{
+  "actionBar.logout": {
+    "defaultMessage": "Odhlásit se"
+  },
+  "navbar.important": {
+    "defaultMessage": "Důležité"
+  },
+  "navbar.inbox": {
+    "defaultMessage": "Doručená pošta"
+  },
+  "navbar.today": {
+    "defaultMessage": "Dnes"
+  }
+}

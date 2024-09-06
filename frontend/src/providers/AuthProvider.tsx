@@ -3,6 +3,7 @@ import {
   Auth0ProviderOptions,
   useAuth0,
 } from '@auth0/auth0-react'
+import { Loading } from 'components'
 import { useNavigate } from 'react-router-dom'
 
 interface Props {
@@ -33,7 +34,7 @@ export const AuthProvider = ({ children }: Props) => {
 const AuthErrorProvider = ({ children }: Props) => {
   const { isLoading, error } = useAuth0()
   if (isLoading) {
-    return <div>Loading...</div>
+    return <Loading />
   }
   if (error) {
     return <div>Oops... {error.message}</div>

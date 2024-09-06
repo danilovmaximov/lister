@@ -1,0 +1,14 @@
+{
+  "actionBar.logout": {
+    "defaultMessage": "Выйти"
+  },
+  "navbar.important": {
+    "defaultMessage": "Важно"
+  },
+  "navbar.inbox": {
+    "defaultMessage": "Входящие"
+  },
+  "navbar.today": {
+    "defaultMessage": "Сегодня"
+  }
+}
