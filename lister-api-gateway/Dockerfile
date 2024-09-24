@@ -19,5 +19,8 @@ LABEL authors="danilmaksimov"
 # Copy the packaged jar file from the build stage
 COPY --from=build /app/target/lister-api-gateway-0.0.1-SNAPSHOT.jar lister-api-gateway-0.0.1-SNAPSHOT.jar
 
+# Set up environment properties
+ENV SPRING_PROFILES_ACTIVE=docker
+
 # Set the entry point to run the jar file
 ENTRYPOINT ["java", "-jar", "lister-api-gateway-0.0.1-SNAPSHOT.jar"]

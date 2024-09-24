@@ -16,11 +16,6 @@ spring:
 server:
   port: 9050
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9001/eureka
-
 okta:
   oauth2:
     audience: http://localhost:9050
