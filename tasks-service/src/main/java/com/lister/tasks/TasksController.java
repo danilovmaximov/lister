@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("/task")
 public class TasksController {
 
     private final TaskRepository taskRepository;
@@ -21,7 +21,7 @@ public class TasksController {
         return taskRepository.findById(id).orElse(null);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Task> listTasks() {
         return taskRepository.findAll();
     }
@@ -32,20 +32,15 @@ public class TasksController {
         return listTasks();
     }
 
-    @PutMapping
-    public List<Task> updateTask(Task task) {
+    @PutMapping("/{id}")
+    public List<Task> updateTask(@PathVariable int id, Task task) {
+        task.setId(id);
         taskRepository.save(task);
         return listTasks();
     }
 
-    @DeleteMapping
-    public List<Task> deleteTask(Task task) {
-        taskRepository.delete(task);
-        return listTasks();
-    }
-
     @DeleteMapping("/{id}")
-    public List<Task> deleteTaskById(@PathVariable int id) {
+    public List<Task> deleteTask(@PathVariable int id) {
         taskRepository.deleteById(id);
         return listTasks();
     }
