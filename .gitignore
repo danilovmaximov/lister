@@ -1,9 +1,10 @@
 # === Global ignore ===
 .DS_Store
 
-# === Postgres DB ===
+# === Postgres DB & pgAdmin ===
 
-pgdata/**/*
+database/pgAdmin
+database/postgresql/data
 
 # === Frontend ignore ===
 

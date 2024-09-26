@@ -1,28 +1,28 @@
 -- To rebuilt all tables after structure changes  uncomment this:
-/* 
-DROP TABLE IF EXISTS Stage;
-DROP TABLE IF EXISTS Task;
-DROP TABLE IF EXISTS STATUSES;
-DROP TABLE IF EXISTS Users;
-DROP TABLE IF EXISTS List;
-*/
+
+DROP TABLE IF EXISTS public.Stage;
+DROP TABLE IF EXISTS public.Task;
+DROP TABLE IF EXISTS public.STATUSES;
+DROP TABLE IF EXISTS public.Users;
+DROP TABLE IF EXISTS public.List;
+
 
 -- Users' information tables:
-CREATE TABLE Users (
+CREATE TABLE public.Users (
     id SERIAL PRIMARY KEY,
     "name" VARCHAR(100) NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL
 );
 
-CREATE TABLE List (
+CREATE TABLE public.List (
     id SERIAL PRIMARY KEY,
     "label" VARCHAR(100) NOT NULL,
     "text" VARCHAR(300),
     CONSTRAINT alphabet_or_numbers_in_label CHECK ("label" ~ '^[a-zA-Z0-9]+$')
 );
 
-CREATE TABLE Stage (
+CREATE TABLE public.Stage (
     id SERIAL PRIMARY KEY,
     list_id SERIAL REFERENCES List(id),
     "name" VARCHAR(100) NOT NULL,
@@ -30,11 +30,11 @@ CREATE TABLE Stage (
     CONSTRAINT alphabet_or_numbers_in_stage CHECK ("name" ~ '^[a-zA-Z0-9]+$')
 );
 
-CREATE TABLE Statuses ( -- Statuses for checkbox
+CREATE TABLE public.Statuses ( -- Statuses for checkbox
 	status_name VARCHAR(50) UNIQUE NOT NULL PRIMARY KEY
 );
 
-CREATE TABLE Task (
+CREATE TABLE public.Task (
     id SERIAL PRIMARY KEY,
     "label" VARCHAR(100) NOT NULL,
     due_date DATE, -- Assuming due_date_is_less_than_current is handled in application code
